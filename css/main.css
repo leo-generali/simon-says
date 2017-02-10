@@ -1,3 +1,5 @@
+
+
 .container{
   display: flex;
   size: 3em;
@@ -6,4 +8,10 @@
 
 .button{
   font-size: 10em;
+  transition: 0.08s;
+}
+
+.pressed{
+  background-color: red;
+  transform: scale(1.2);
 }
