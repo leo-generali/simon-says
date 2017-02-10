@@ -14,7 +14,7 @@ key = {
   },
 
   //Give the button a pressed down effect on keyboard press
-  pressButton: function(e, aiKey){
+  pressButton: function(e){
     const btn = document.querySelector(`div[data-key="${e.keyCode}"]`);
     console.log(btn);
     btn.classList.add('pressed');
@@ -31,9 +31,11 @@ key = {
 
   //keep track of player and ai button presses
   populateArray: function(key){
-    if(logic.playerPlaying){
+    if(logic.playerPlaying === true && logic.aiDemoing === false){
+      console.log('Players turn!')
       logic.playerKeyPressArray.push(key);
-    }else{
+    }else if(logic.playerPlaying === false && logic.aiDemoing === false){
+      console.log('AI turn!')
       logic.aiKeyPressArray.push(key);
     }
     return;
@@ -41,6 +43,7 @@ key = {
 
   aiButtonPress: function(aiNum){
     this.buttons[40 - aiNum].classList.add('pressed');
+    this.populateArray(aiNum);
   },
 
   apply: function(){
