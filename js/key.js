@@ -13,22 +13,34 @@ key = {
     e.target.classList.remove('pressed');
   },
 
-  //Give the button a pressed down effect
-  pressButton: function(e){
+  //Give the button a pressed down effect on keyboard press
+  pressButton: function(e, aiKey){
     const btn = document.querySelector(`div[data-key="${e.keyCode}"]`);
+    console.log(btn);
     btn.classList.add('pressed');
-    if(logic.playerPlaying){
-      logic.keyPressArray.push(e.keyCode);
-    }
+    key.populateArray(e.keyCode);
   },
 
+  //Give the button a pressed down effect on mouse click
   clickButton: function(e){
     if(e.target.tagName !== "HTML"){
       e.target.classList.add('pressed');
-      if(logic.playerPlaying){
-        logic.keyPressArray.push(Number(e.target.dataset.key));
-      }
+      key.populateArray(Number(e.target.dataset.key));
     }
+  },
+
+  //keep track of player and ai button presses
+  populateArray: function(key){
+    if(logic.playerPlaying){
+      logic.playerKeyPressArray.push(key);
+    }else{
+      logic.aiKeyPressArray.push(key);
+    }
+    return;
+  },
+
+  aiButtonPress: function(aiNum){
+    this.buttons[40 - aiNum].classList.add('pressed');
   },
 
   apply: function(){

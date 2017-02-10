@@ -1,9 +1,7 @@
 logic = {
   playerPlaying: true,
 
-  keyPressArray: [],
+  playerKeyPressArray: [],
 
   aiKeyPressArray: [],
-
-  tempPlayerKeyPressArray: []
 }
