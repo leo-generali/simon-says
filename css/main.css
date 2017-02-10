@@ -1,0 +1,9 @@
+.container{
+  display: flex;
+  size: 3em;
+  justify-content: center;
+}
+
+.button{
+  font-size: 10em;
+}
