@@ -9,6 +9,7 @@
 .button{
   font-size: 10em;
   transition: 0.08s;
+  background-color: yellow;
 }
 
 .pressed{
