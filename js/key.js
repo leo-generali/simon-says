@@ -17,17 +17,21 @@ key = {
   pressButton: function(e){
     const btn = document.querySelector(`div[data-key="${e.keyCode}"]`);
     btn.classList.add('pressed');
-    console.log(e.keyCode);
+    if(logic.playerPlaying){
+      logic.keyPressArray.push(e.keyCode);
+    }
   },
 
   clickButton: function(e){
     if(e.target.tagName !== "HTML"){
       e.target.classList.add('pressed');
+      if(logic.playerPlaying){
+        logic.keyPressArray.push(Number(e.target.dataset.key));
+      }
     }
   },
-
 
   apply: function(){
     this.buttons.forEach(button => button.addEventListener('transitionend', key.removeTransition));
   }
-}
+};
