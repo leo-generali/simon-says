@@ -32,7 +32,7 @@ key = {
   //keep track of player and ai button presses
   populateArray: function(key){
     if(logic.playerPlaying === true && logic.aiDemoing === false){
-      console.log('Players turn!')
+      console.log('Player turn!')
       logic.playerKeyPressArray.push(key);
     }else if(logic.playerPlaying === false && logic.aiDemoing === false){
       console.log('AI turn!')

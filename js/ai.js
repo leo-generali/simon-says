@@ -16,15 +16,29 @@ ai = {
   },
 
   //go through each keypress in ai array
-  demo: function(){
-    for (let i = 0; i < logic.aiKeyPressArray.length; i++) {
+  demo: function(test){
+    logic.aiDemoing = true;
+    for (let i = 0; i < logic.turns; i++) {
       setTimeout(function(){
-        key.aiButtonPress(logic.aiKeyPressArray[i]);}, 1250 * i);
-        console.log(logic.aiKeyPressArray);
+        console.log('The AI is demoing: ' + logic.aiDemoing);
+        key.aiButtonPress(logic.aiKeyPressArray[i]);
+        console.log(logic.aiKeyPressArray[i]);
+        if(i === logic.turns - 1){
+          test();
+        };
+      }, 1250 * i)
     }
-    logic.aiDemoing = false;
-    setTimeout(ai.buttonPress, 3000);
-    
+  },
+
+  post: function(){
+      logic.aiDemoing = false;
+      console.log('The AI is demoing: ' + logic.aiDemoing);
+      setTimeout(function(){
+        ai.buttonPress();
+      }, 2000);
+      logic.turns++;
   }
+
+
 
 };
