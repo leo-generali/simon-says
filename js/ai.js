@@ -16,29 +16,26 @@ ai = {
   },
 
   //go through each keypress in ai array
-  demo: function(test){
+  demo: function(){
     logic.aiDemoing = true;
     for (let i = 0; i < logic.turns; i++) {
       setTimeout(function(){
-        console.log('The AI is demoing: ' + logic.aiDemoing);
         key.aiButtonPress(logic.aiKeyPressArray[i]);
-        console.log(logic.aiKeyPressArray[i]);
         if(i === logic.turns - 1){
-          test();
+          ai.post();
         };
       }, 1250 * i)
     }
   },
 
   post: function(){
+      logic.turns++;
       logic.aiDemoing = false;
       console.log('The AI is demoing: ' + logic.aiDemoing);
       setTimeout(function(){
         ai.buttonPress();
-      }, 2000);
-      logic.turns++;
+        logic.playerPlaying = true
+        player.check();
+      }, 1250);
   }
-
-
-
 };

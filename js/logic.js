@@ -3,11 +3,13 @@ logic = {
 
   aiDemoing: false,
 
-  turns: 3,
+  turns: 0,
+
+  count: 0,
 
   playerKeyPressArray: [],
 
-  aiKeyPressArray: [40, 40, 40]
+  aiKeyPressArray: []
 
 }
 

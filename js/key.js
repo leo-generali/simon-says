@@ -11,6 +11,10 @@ key = {
   //Removes the pressed effect from each arrow
   removeTransition: function(e){
     e.target.classList.remove('pressed');
+    if(logic.count === logic.turns){
+      player.resetTurn();
+      ai.demo();
+    }
   },
 
   //Give the button a pressed down effect on keyboard press
@@ -32,10 +36,9 @@ key = {
   //keep track of player and ai button presses
   populateArray: function(key){
     if(logic.playerPlaying === true && logic.aiDemoing === false){
-      console.log('Player turn!')
+      player.check(key);
       logic.playerKeyPressArray.push(key);
     }else if(logic.playerPlaying === false && logic.aiDemoing === false){
-      console.log('AI turn!')
       logic.aiKeyPressArray.push(key);
     }
     return;
