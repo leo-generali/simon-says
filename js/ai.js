@@ -11,7 +11,7 @@ ai = {
       key.aiButtonPress(num);
       return;
     }
-    const rand = ai.selectKey();
+    const rand = this.selectKey();
     key.aiButtonPress(rand);
   },
 
@@ -22,16 +22,16 @@ ai = {
       setTimeout(function(){
         key.aiButtonPress(logic.aiKeyPressArray[i]);
         if(i === logic.turns - 1){
-          ai.post();
+          ai.selectNewKey();
         };
       }, 1250 * i)
     }
   },
 
-  post: function(){
+  selectNewKey: function(){
       logic.turns++;
       logic.aiDemoing = false;
-      console.log('The AI is demoing: ' + logic.aiDemoing);
+      document.getElementById('status').innerHTML = 'AI Selecting a new key';
       setTimeout(function(){
         ai.buttonPress();
         logic.playerPlaying = true

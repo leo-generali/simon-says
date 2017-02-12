@@ -1,4 +1,3 @@
-
 key = {
   init: function(){
     window.addEventListener('keydown', this.pressButton);
@@ -12,15 +11,23 @@ key = {
   removeTransition: function(e){
     e.target.classList.remove('pressed');
     if(logic.count === logic.turns){
-      player.resetTurn();
-      ai.demo();
+      key.startNewRound()
     }
+  },
+
+  startNewRound: function(){
+    logic.playerKeyPressArray = [];
+    logic.count = 0;
+    logic.playerPlaying = false;
+    document.getElementById('status').innerHTML = 'AI Demoing';
+    setTimeout(function(){
+      ai.demo();
+    }, 1250)
   },
 
   //Give the button a pressed down effect on keyboard press
   pressButton: function(e){
     const btn = document.querySelector(`div[data-key="${e.keyCode}"]`);
-    console.log(btn);
     btn.classList.add('pressed');
     key.populateArray(e.keyCode);
   },
@@ -53,3 +60,4 @@ key = {
     this.buttons.forEach(button => button.addEventListener('transitionend', key.removeTransition));
   }
 };
+
