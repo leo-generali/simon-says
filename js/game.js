@@ -1,3 +1,2 @@
 key.init();
-
 ai.selectNewKey();

@@ -21,7 +21,7 @@ logic = {
     }, 1250)
   },
 
-  starNewGame: function(){
+  startNewGame: function(){
     this.playerKeyPressArray = [];
     this.count = 0;
     this.playerPlaying = false;

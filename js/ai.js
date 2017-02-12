@@ -36,7 +36,8 @@ ai = {
       setTimeout(function(){
         ai.buttonPress();
         logic.playerPlaying = true
-        player.check();
+        document.getElementById('status').innerHTML = 'Player checking';
+        //player.check();
       }, 1250);
   }
 };
