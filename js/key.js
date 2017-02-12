@@ -11,18 +11,8 @@ key = {
   removeTransition: function(e){
     e.target.classList.remove('pressed');
     if(logic.count === logic.turns){
-      key.startNewRound()
+      logic.startNewRound()
     }
-  },
-
-  startNewRound: function(){
-    logic.playerKeyPressArray = [];
-    logic.count = 0;
-    logic.playerPlaying = false;
-    document.getElementById('status').innerHTML = 'AI Demoing';
-    setTimeout(function(){
-      ai.demo();
-    }, 1250)
   },
 
   //Give the button a pressed down effect on keyboard press
