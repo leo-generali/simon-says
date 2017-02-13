@@ -27,7 +27,7 @@ logic = {
     this.playerPlaying = false;
     this.turns = 0;
     this.aiKeyPressArray = [];
-    document.getElementById('score').innerHTML = 'Score: ' + logic.turns;
+    document.getElementById('score').innerHTML = logic.turns;
     ai.selectNewKey();
   }
 

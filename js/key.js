@@ -24,10 +24,8 @@ key = {
 
   //Give the button a pressed down effect on mouse click
   clickButton: function(e){
-    if(e.target.tagName !== "HTML"){
-      e.target.classList.add('pressed');
-      key.populateArray(Number(e.target.dataset.key));
-    }
+    e.target.classList.add('pressed');
+    key.populateArray(Number(e.target.dataset.key));
   },
 
   //keep track of player and ai button presses

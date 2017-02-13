@@ -11,6 +11,7 @@
 body{
   background-color: #071013;
   color: white;
+  font: 'Open-sans';
 }
 
 .container{
@@ -23,7 +24,6 @@ body{
 
 #down{
   border-color: #06AED5;
-  order: 4;
 }
 
 #down:hover{
@@ -33,7 +33,6 @@ body{
 
 #right{
   border-color: #F0C808;
-  order: 3;
 }
 
 #right:hover{
@@ -43,7 +42,6 @@ body{
 
 #up{
   border-color: #FF9914;
-  order: 1;
 }
 
 #up:hover{
@@ -53,12 +51,15 @@ body{
 
 #left{
   border-color: #DD1C1A;
-  order: 2;
 }
 
 #left:hover{
   background-color: #DD1C1A;
   cursor: pointer;
+}
+
+#score{
+  width: 1em;
 }
 
 .button{
@@ -78,23 +79,8 @@ body{
   background-color: #071013;
 }
 
-.center{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.center-up-down{
-  top: 55%;
-}
-
 .pressed{
   transform: scale(1.1);
-}
-
-@media all and (max-width: 1000px) {
-
 }
 
 @media all and (max-width: 700px) {
@@ -114,6 +100,6 @@ body{
 @media all and (max-width: 370px) {
   .button {
     /* When on medium sized screens, we center it by evenly distributing empty space around items */
-      font-size: 6em;
+      font-size: 7em;
   }
 }
