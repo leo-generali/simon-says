@@ -1,18 +1,119 @@
+/*
 
+#071013 - 
+#06AED5 - Bright Ceruluan
+#F0C808 - Yellow
+#FFF1D0 - Cream
+#DD1C1A - Red
+
+*/
+
+body{
+  background-color: #071013;
+  color: white;
+}
 
 .container{
   display: flex;
-  size: 3em;
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+
+}
+
+#down{
+  border-color: #06AED5;
+  order: 4;
+}
+
+#down:hover{
+  background-color: #06AED5;
+  cursor: pointer;
+}
+
+#right{
+  border-color: #F0C808;
+  order: 3;
+}
+
+#right:hover{
+  background-color: #F0C808;
+  cursor: pointer;
+}
+
+#up{
+  border-color: #FF9914;
+  order: 1;
+}
+
+#up:hover{
+  background-color: #FF9914;
+  cursor: pointer;
+}
+
+#left{
+  border-color: #DD1C1A;
+  order: 2;
+}
+
+#left:hover{
+  background-color: #DD1C1A;
+  cursor: pointer;
 }
 
 .button{
-  font-size: 10em;
+  width: 1em;
+  height: 1em;
+  position: relative;
+
+  text-align: center;
+  font-size: 14em;
+
+  margin: 10px;
+  border-radius: 100%;
+
+  border: 15px solid;
+
   transition: 0.17s;
-  background-color: yellow;
+  background-color: #071013;
+}
+
+.center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center-up-down{
+  top: 55%;
 }
 
 .pressed{
-  background-color: red;
   transform: scale(1.1);
+}
+
+@media all and (max-width: 1000px) {
+
+}
+
+@media all and (max-width: 700px) {
+  .button {
+    /* When on medium sized screens, we center it by evenly distributing empty space around items */
+      font-size: 12em;
+  }
+}
+
+@media all and (max-width: 515px) {
+  .button {
+    /* When on medium sized screens, we center it by evenly distributing empty space around items */
+      font-size: 8em;
+  }
+}
+
+@media all and (max-width: 370px) {
+  .button {
+    /* When on medium sized screens, we center it by evenly distributing empty space around items */
+      font-size: 6em;
+  }
 }
