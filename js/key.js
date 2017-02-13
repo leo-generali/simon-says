@@ -1,11 +1,11 @@
 key = {
+  buttons: document.querySelectorAll('.button'),
+
   init: function(){
     window.addEventListener('keydown', this.pressButton);
     window.addEventListener('click', this.clickButton);
     this.apply();
   },
-
-  buttons: document.querySelectorAll('.button'),
 
   //Removes the pressed effect from each arrow
   removeTransition: function(e){

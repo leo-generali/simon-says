@@ -11,15 +11,13 @@
 body{
   background-color: #071013;
   color: white;
-  font: 'Open-sans';
+  font-family: 'Open Sans', sans-serif;
 }
 
 .container{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-
 }
 
 #down{
@@ -56,10 +54,6 @@ body{
 #left:hover{
   background-color: #DD1C1A;
   cursor: pointer;
-}
-
-#score{
-  width: 1em;
 }
 
 .button{
@@ -100,6 +94,6 @@ body{
 @media all and (max-width: 370px) {
   .button {
     /* When on medium sized screens, we center it by evenly distributing empty space around items */
-      font-size: 7em;
+      font-size: 6em;
   }
 }

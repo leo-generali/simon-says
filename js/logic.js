@@ -15,7 +15,7 @@ logic = {
     this.playerKeyPressArray = [];
     this.count = 0;
     this.playerPlaying = false;
-    document.getElementById('status').innerHTML = 'AI Demoing';
+    //document.getElementById('status').innerHTML = 'AI Demoing';
     setTimeout(function(){
       ai.demo();
     }, 1250)
