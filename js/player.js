@@ -3,8 +3,7 @@ player = {
     if(num === logic.aiKeyPressArray[logic.count] && logic.count < logic.turns){
       logic.count++
     }else if(num !== logic.aiKeyPressArray[logic.count]){
-      console.log('you lose');
-      logic.startNewGame();
+      document.getElementById('status').innerHTML = 'Oh no! Wrong button! Refresh to start a new game.';
     }
   },
 };

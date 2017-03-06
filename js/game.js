@@ -6,14 +6,14 @@ game = {
 
   newInit: function(){
     var startButton = document.getElementById('start-btn');
-    
+    startButton.style.display = 'none';
     key.init();
     ai.selectNewKey();
-  }
+  },
 
   gameStart: function(){
     var startButton = document.getElementById('start-btn');
-    startButton.addEventListener('click', this.init);
+    startButton.addEventListener('click', this.newInit);
   }
 }
 
