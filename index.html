@@ -13,22 +13,22 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
-        <div class='container'>
-          <h1 class='color' id='score'></h1>
-        </div>
-
-        <div class='container'>
+        
+        <div class='flex-container'>
+            <div id='controls'>
+                <div id='start'>Start</div>            
+            </div>
+            <div>
+                <div class='container'>
+                  <h1 class='color' id='score'></h1>
+                  <h1 id='status'></h1>
+                </div>
+            </div>
           <div data-key='40' id='down' class='button'></div>
-        </div>
-
-        <div class='container'>
           <div data-key='39' id='right' class='button'></div>
           <div data-key='38' id='up' class='button'></div>
-        </div>
-
-        <div class='container'>
           <div data-key='37' id='left' class='button'></div>
+
         </div>
 
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->

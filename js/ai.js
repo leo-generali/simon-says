@@ -32,7 +32,7 @@ ai = {
       logic.turns++;
       document.getElementById('score').innerHTML = logic.turns;
       logic.aiDemoing = false;
-      //document.getElementById('status').innerHTML = 'AI Selecting a new key';
+      document.getElementById('status').innerHTML = 'AI Selecting a new key';
       setTimeout(function(){
         ai.buttonPress();
         logic.playerPlaying = true
