@@ -15,9 +15,13 @@ body{
 }
 
 .container{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  text-align: center
+}
+
+#controls{
+  order: 0;
+  flex: 1 100%;
+
 }
 
 .flex-container{
@@ -25,10 +29,20 @@ body{
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  align-content: center;
+
+  height: 95vh;
 }
 
-#start{
+#start-btn{
+  background-color: lightgreen;
+  border-radius: 20px;
+  padding: 1rem 2rem;
+}
 
+#start-btn:hover{
+  background-color: darkgreen;
+  cursor: pointer;
 }
 
 #down{

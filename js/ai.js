@@ -32,11 +32,15 @@ ai = {
       logic.turns++;
       document.getElementById('score').innerHTML = logic.turns;
       logic.aiDemoing = false;
-      document.getElementById('status').innerHTML = 'AI Selecting a new key';
+      setTimeout(function(){
+          document.getElementById('status').innerHTML = 'AI Picking New Button';
+        }, 750)
       setTimeout(function(){
         ai.buttonPress();
         logic.playerPlaying = true
-        //document.getElementById('status').innerHTML = 'Player checking';
+        setTimeout(function(){
+          document.getElementById('status').innerHTML = 'Player Turn';
+        }, 750)
         //player.check();
       }, 1250);
   }

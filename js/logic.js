@@ -15,7 +15,7 @@ logic = {
     this.playerKeyPressArray = [];
     this.count = 0;
     this.playerPlaying = false;
-    //document.getElementById('status').innerHTML = 'AI Demoing';
+    document.getElementById('status').innerHTML = 'AI Demoing';
     setTimeout(function(){
       ai.demo();
     }, 1250)
@@ -27,7 +27,7 @@ logic = {
     this.playerPlaying = false;
     this.turns = 0;
     this.aiKeyPressArray = [];
-    document.getElementById('score').innerHTML = logic.turns;
+    document.getElementById('score').innerHTML = this.turns;
     ai.selectNewKey();
   }
 
